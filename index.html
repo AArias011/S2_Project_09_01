@@ -54,9 +54,58 @@
     <section>
         <h1>Conference Registration Form</h1>
         <p>Required Item (*)</p>
+
+        <!-- This code adds a web form that employs the action at a certain link you give it and a method of post. -->
         <form action="http://www.example.com/cg/register" method="post">
+            <!-- This code has a label of title and this is the text that is next to the input boxes. The input element makes a box on the rendered page and it also has certain data fields, control ids and types.-->
             <label for="title">Title</label>
-            <input type="text" name="custTitle" id="title" placeholder="Prof.">
+            <input type="text" name="title" id="titleBox" list="titleList" />
+            <!-- In this code I have a datalist that contains different option values. So this basically makes a drop down on the rendered page and the values in the option tags are able to be selected by the user. -->
+            <datalist id="titleList">
+                <option value="Mr." />
+                <option value="Mrs." />
+                <option value="Ms." />
+                <option value="Prof." />
+                <option value="Dr." />
+                <option value="Assist Prof." />
+                <option value="Assoc." />
+            </datalist>
+            <!-- This code has a label of First Name and this is the text that is next to the input boxes. The input element makes a box on the rendered page and it also has certain data fields, control ids and types. The required attribute is so that the user cannot submit without putting in the info for the certain input box.-->
+            <label for="first">First Name*</label>
+            <input type="text" name="firstName" id="fnBox" required />
+            <!-- This code has a label of Last Name and this is the text that is next to the input boxes. The input element makes a box on the rendered page and it also has certain data fields, control ids and types. The required attribute is so that the user cannot submit without putting in the info for the certain input box.-->
+            <label for="last">Last Name*</label>
+            <input type="text" name="lastName" id="lnBox" required />
+            <!-- This code has a label of Address and this is the text that is next to the input boxes. The input element makes a box on the rendered page and it also has certain data fields, control ids and types. The required attribute is so that the user cannot submit without putting in the info for the certain input box.-->
+            <label for="address">Address*</label>
+            <textarea name="address" id="addBox" cols="30" rows="10"></textarea>
+            <!-- This code has a label of Company or University and this is the text that is next to the input boxes. The input element makes a box on the rendered page and it also has certain data fields, control ids and types.-->
+            <label for="company">Company or University</label>
+            <input type="text" name="group" id="groupBox" />
+            <!-- This code has a label of Email and this is the text that is next to the input boxes. The input element makes a box on the rendered page and it also has certain data fields, control ids and types. The required attribute is so that the user cannot submit without putting in the info for the certain input box.-->
+            <label for="email">E-mail*</label>
+            <input type="email" name="email" id="mailBox" required />
+            <!-- This code has a label of Phone Number and this is the text that is next to the input boxes. The input element makes a box on the rendered page and it also has certain data fields, control ids and types. The required attribute is so that the user cannot submit without putting in the info for the certain input box. The pattern attribute basically validates the text value against a regular expression.-->
+            <label for="phone">Phone Number*</label>
+            <input type="tel" name="phoneNumber" id="phoneBox" placeholder="(nnn) nnn-nnn" required pattern=" ^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+            <!-- This code has a label of ACGIP Membership Number and this is the text that is next to the input boxes. The input element makes a box on the rendered page and it also has certain data fields, control ids and types. The required attribute is so that the user cannot submit without putting in the info for the certain input box. The pattern attribute basically validates the text value against a regular expression.-->
+            <label for="member">ACGIP Membership Number</label>
+            <input type="text" name="acgipID" id="idBox" placeholder="acgip-nnnnnn" pattern=" ^acgip\-\d{6}$" />
+            <!-- This code has a label of Registration Category Number and this is the text that is next to the input boxes. The input element makes a box on the rendered page and it also has certain data fields, control ids and types. The required attribute is so that the user cannot submit without putting in the info for the certain input box.-->
+            <label for="registration">Registration Category</label>
+            <!-- This set of code is a selection list, this basically makes a vertical scrollbar on the rendered page and this text thats in the option tag is in the scroll bar and the user is able to select it. -->
+            <select name="registerType" id="reglist">
+                <option value="member">ACGIP Member ($695)</option>
+                <option value="nonmember">Non-Member ($795)</option>
+                <option value="student">Student ($310)</option>
+                <option value="poster">Poster ($95)</option>
+                <option value="guest">Guest ($35)</option>
+            </select>
+            <!-- This set of code has a paragraph tag, the type "submit" makes a submit button and the value "continue" is the text in the input box. -->
+            <p>
+                <input type="submit" value="continue" />
+            </p>
+
 
         </form>
 

@@ -13,3 +13,29 @@
 
 
 /* Validation Styles */
+/* This code sets the input, select and textarea elements to have a pseudo class of focus. Then the background color is set to a certain rgb triplet.  */
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: rgb(245, 245, 140);
+}
+
+/* This code affects the input and textarea elements with the ids of fnBox, lnBox, addBox, mailBox, phoneBox and idBox to have pseudo classes of focus and valid. It gives a certain background color, a certain url of an image and sets the image to the bottom right. */
+input#fnBox:focus:valid,
+input#lnBox:focus:valid,
+textarea#addBox:focus:valid,
+input#mailBox:focus:valid,
+input#phoneBox:focus:valid,
+input#idBox:focus:valid {
+    background: rgb(220, 255, 220) url(cg_valid.png) bottom right no-repeat;
+}
+
+/* This code affects the input elements with the ids of fnBox, lnBox, addBox, mailBox, phoneBox and idBox to have pseudo classes of focus and invalid. It gives a certain background color, a certain url of an image and sets the image to the bottom right. */
+input#fnBox:focus:invalid,
+input#lnBox:focus:invalid,
+input#addBox:focus:invalid,
+input#mailBox:focus:invalid,
+input#phoneBox:focus:invalid,
+input#idBox:focus:invalid {
+    background: rgb(255, 232, 232) url(cg_invalid.png) right/contain no-repeat;
+}
